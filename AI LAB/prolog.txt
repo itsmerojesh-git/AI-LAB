@@ -1,0 +1,41 @@
+Task 1: Prolog Program
+prolog
+Copy code
+% Facts
+graduating(ram).
+
+% Rules
+happy(X) :- graduating(X).
+smiles(X) :- happy(X).
+
+% Query
+?- smiles(ram).
+
+Task 2: Prolog Program
+prolog
+Copy code
+% Facts
+equilateral(abc).
+
+% Rules
+isos(ABC) :- equilateral(ABC).
+equal(ab, ac) :- isos(ABC).
+equal(b, c) :- equal(ab, ac).
+
+% Query
+?- equal(b, c).
+Task 3: Prolog Program
+prolog
+Copy code
+% Facts
+is_cat(ziggy).
+likes(ziggy, fish).
+
+% Rules
+eats(X, Y) :-
+    is_cat(X),
+    likes(X, Y).
+
+% Queries
+?- likes(ziggy, fish).  % Expected: true
+?- eats(ziggy, fish).   % Expected: true
